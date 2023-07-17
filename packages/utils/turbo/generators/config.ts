@@ -30,6 +30,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
                 templateFile: 'templates/main.hbs',
             },
             {
+                type: 'add',
+                path: 'src/{{name}}/{{name}}.md',
+                templateFile: 'templates/doc.hbs',
+            },
+            {
                 type: 'append',
                 path: 'src/index.ts',
                 template: "export { default as {{ name }} } from './{{ name }}'",
@@ -61,6 +66,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
                 type: 'add',
                 path: 'src/{{pascalCase name}}/{{pascalCase name}}.ts',
                 templateFile: 'class-templates/main.hbs',
+            },
+            {
+                type: 'add',
+                path: 'src/{{pascalCase name}}/{{pascalCase name}}.md',
+                templateFile: 'class-templates/doc.hbs',
             },
             {
                 type: 'append',
