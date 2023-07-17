@@ -30,6 +30,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
                 templateFile: 'templates/hook.hbs',
             },
             {
+                type: 'add',
+                path: 'src/{{name}}/{{name}}.md',
+                templateFile: 'templates/doc.hbs',
+            },
+            {
                 type: 'append',
                 path: 'src/index.ts',
                 template: "export { default as {{ name }} } from './{{ name }}'",
