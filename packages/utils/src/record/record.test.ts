@@ -8,12 +8,28 @@ describe('record test', () => {
         password: 'Passw0rd',
     };
 
+    const something = {
+        user: {
+            id: 0,
+            name: 'hong gil dong',
+            email: '',
+        },
+        priority: 2,
+        is_admin: false,
+    };
+
     const SAMPLE_KEYS = Object.keys(SAMPLE_OBJECT);
     const SAMPLE_VALUES = Object.values(SAMPLE_OBJECT);
 
     it('object record test', () => {
         expect(record(SAMPLE_KEYS, SAMPLE_VALUES)).toStrictEqual({
             ...SAMPLE_OBJECT,
+        });
+    });
+
+    it('object in object is working??', () => {
+        expect(record(Object.keys(something), Object.values(something))).toStrictEqual({
+            ...something,
         });
     });
 });
