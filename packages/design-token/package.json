@@ -1,0 +1,9 @@
+{
+  "name": "design-token",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "build": "node ./color-maker.js"
+  }
+}

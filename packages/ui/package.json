@@ -48,6 +48,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "clsx": "^1.2.1"
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.14.0"
   }
 }
